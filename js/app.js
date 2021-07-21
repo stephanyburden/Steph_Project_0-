@@ -13,23 +13,19 @@ function startGame() {
    
     //tamgotchi status bar displays - use timer thing teacher showed us.
    startHungerTimer()
-   startAging()
-
-} //WORKING
+} //COMPLETE
 
 function hideStartBtn(){
     console.log("start button should disappear")
     // grab the start button. already done on line one
     // access the style with .style
     // using .display set disply to none
+    document.getElementById("start-btn").style.display = "none"
 
     //if you get lost, google .style javascript docs
-} //INCOMPLETE
+} //COMPLETE
 
 function startHungerTimer(){
     console.log("feed me bitch!")
-} //INCOMPLETE
-
-function startAging(){
-    console.log("We all gotta die sometime.")
+    //implement thingy that teach was talking bout
 } //INCOMPLETE
