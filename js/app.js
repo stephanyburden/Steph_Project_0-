@@ -14,10 +14,10 @@ const playEl = document.getElementById("play");
 // State Var. 
 
 
-let ageInterval = null;
 let hungerInterval = null;
 let sleepInterval = null;
 let playInterval = null;
+let ageInterval = null;
 
 
 //Event Listners 
@@ -59,16 +59,31 @@ function startHungerTimer(){
         myPet.hunger++;
         // increase the count on the page
     hungerEl.textContent =  "Hunger: " + myPet.hunger; 
-    if(myPet.hunger >= 4) {
+    if(myPet.hunger === 4) {
         console.log("Feed me HUMAN!")
-    }
-    }, 1000)
+    }else if (myPet.hunger === 10) {
+        clearInterval(hungerInterval);
+        console.log("YOU KILLED ME IM DEADDDD X__X!---hunger")
+        }
+    }, 4000)
     
     // And increase hunger count on page
 } //COMPLETE
 
+
 function startSleepTimer() {
-    console.log("YO, Im mad sleepy!!");
+    sleepInterval = setInterval(function () {
+        myPet.sleep++;
+        // increase the count on the page
+    sleepEl.textContent =  "Sleep: " + myPet.sleep; 
+    if(myPet.sleep === 6) {
+        console.log("YO! Im mad sleepy!!")
+    }else if (myPet.sleep === 10) {
+        clearInterval(sleepInterval);
+        console.log("DAMNNN....YOU KILLED ME TOO X__X!!---sleep ")
+    }
+    }, 6000)
+    
 }
 
 function startPlayTimer() {
@@ -100,10 +115,10 @@ function playTime() {
 class Tamagotchi {
     constructor(inputName) {
         this.name = inputName;
-        this.age = 1;
-        this.hunger = 1;
-        this.sleep = 1;
-        this.play = 1;
+        this.age = 0;
+        this.hunger = 0;
+        this.sleep = 0;
+        this.play = 0;
     }
 }
 
