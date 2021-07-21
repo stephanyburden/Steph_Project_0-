@@ -16,7 +16,6 @@ function startGame() {
 } //COMPLETE
 
 function hideStartBtn(){
-    console.log("start button should disappear")
     // grab the start button. already done on line one
     // access the style with .style
     // using .display set disply to none
@@ -27,5 +26,8 @@ function hideStartBtn(){
 
 function startHungerTimer(){
     console.log("feed me bitch!")
-    //implement thingy that teach was talking bout
+    // Grab feed me button
+    // assign an even listner to it so it can be clicked   
+    //implement timer thingy that teach was talking bout
+    // And increase hunger count on page
 } //INCOMPLETE
