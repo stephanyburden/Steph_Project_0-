@@ -53,7 +53,7 @@ function hideStartBtn(){
 function startHungerTimer(){   
     hungerInterval = setInterval(function () {
         myPet.hunger++;
-        hungerEl.textContent =  "Hunger: " + myPet.hunger; 
+        hungerEl.textContent =  "Hungry: " + myPet.hunger; 
         if(myPet.hunger === 4) {
             console.log("Feed me HUMAN!")
         }else if (myPet.hunger === 10) {
@@ -69,7 +69,7 @@ function startHungerTimer(){
 function startSleepTimer() {
     sleepInterval = setInterval(function () {
         myPet.sleep++;
-        sleepEl.textContent =  "Sleep: " + myPet.sleep; 
+        sleepEl.textContent =  "Sleepy: " + myPet.sleep; 
         if(myPet.sleep === 6) {
             console.log("YO! Im mad sleepy!!")
         }else if (myPet.sleep === 10) {
@@ -83,7 +83,7 @@ function startSleepTimer() {
 function startPlayTimer() {
     playInterval = setInterval(function () {
         myPet.play++;
-        playEl.textContent =  "Play: " + myPet.play; 
+        playEl.textContent =  "Playful: " + myPet.play; 
         if(myPet.play === 7) {
             console.log("UGH!! Im SO bored!!")
         }else if (myPet.play === 10) {
