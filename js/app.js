@@ -8,6 +8,7 @@ const ageEl = document.getElementById('age');
 const hungerEl = document.getElementById("hunger");
 const sleepEl = document.getElementById("sleep");
 const playEl = document.getElementById("play");
+const commentEl = document.getElementById("comment");
 
 
 
@@ -45,68 +46,113 @@ function startGame() {
 } //COMPLETE
 
 function hideStartBtn(){
-    // grab the start button. already done on line one
-    // access the style with .style
-    // using .display set disply to none
     document.getElementById("start-btn").style.display = "none"
     
-    //if you get lost, google .style javascript docs
 } //COMPLETE
 
 function startHungerTimer(){   
-    //implement timer thingy that teach was talking bout
     hungerInterval = setInterval(function () {
         myPet.hunger++;
-        // increase the count on the page
-    hungerEl.textContent =  "Hunger: " + myPet.hunger; 
-    if(myPet.hunger === 4) {
-        console.log("Feed me HUMAN!")
-    }else if (myPet.hunger === 10) {
-        clearInterval(hungerInterval);
-        console.log("YOU KILLED ME IM DEADDDD X__X!---hunger")
+        hungerEl.textContent =  "Hunger: " + myPet.hunger; 
+        if(myPet.hunger === 4) {
+            console.log("Feed me HUMAN!")
+        }else if (myPet.hunger === 10) {
+            gameOver();
+            console.log("YOU KILLED ME IM DEADDDD X__X!---hunger")
         }
-    }, 4000)
+    },2000)
     
-    // And increase hunger count on page
+
 } //COMPLETE
 
 
 function startSleepTimer() {
     sleepInterval = setInterval(function () {
         myPet.sleep++;
-        // increase the count on the page
-    sleepEl.textContent =  "Sleep: " + myPet.sleep; 
-    if(myPet.sleep === 6) {
-        console.log("YO! Im mad sleepy!!")
-    }else if (myPet.sleep === 10) {
-        clearInterval(sleepInterval);
-        console.log("DAMNNN....YOU KILLED ME TOO X__X!!---sleep ")
-    }
-    }, 6000)
+        sleepEl.textContent =  "Sleep: " + myPet.sleep; 
+        if(myPet.sleep === 6) {
+            console.log("YO! Im mad sleepy!!")
+        }else if (myPet.sleep === 10) {
+            gameOver();
+            console.log("DAMNNN....YOU KILLED ME TOO X__X!!---sleep ")
+        }
+    }, 4000)
     
-}
+} //COMPLETE
 
 function startPlayTimer() {
-    console.log("I want to play!!!");
-}
+    playInterval = setInterval(function () {
+        myPet.play++;
+        playEl.textContent =  "Play: " + myPet.play; 
+        if(myPet.play === 7) {
+            console.log("UGH!! Im SO bored!!")
+        }else if (myPet.play === 10) {
+            gameOver();
+            console.log("UGGHH you so lame Im dead...LITERALLY!! X___X!!---play")
+        }
+    }, 3000)
+} //COMPLETE
 
 function startAgeTimer() {
-    console.log("Damn Im getting old AF!!");
-}
+    ageInterval = setInterval(function () {
+        myPet.age++;
+        ageEl.textContent =  "Age: " + myPet.age;
+        if(myPet.hunger === 10 || myPet.sleep === 10 || myPet.play === 10) {
+            gameOver();  
+            console.log("Im a goner!! X____X---age")
+        } else if (myPet.age === 25) {
+            gameOver();
+            console.log("AYYEEE!! Im 25!! Lets get LIT!!---age")
+        }
+    }, 2000)
+} // Complete
 
+function gameOver() {
+    clearInterval(ageInterval);
+    clearInterval(hungerInterval);
+    clearInterval(sleepInterval);
+    clearInterval(playInterval);
+    // Hide buttons when pet dies!
+}
 
 
 
 function feedPet() {
-    console.log("Pet is being fed!");
+    // reduce the pets hunger
+    // update text on screen
+    if(myPet.hunger < 3) {
+        //myPet.hunger = 0;
+        hungerEl.textContent = "Hunger: " + myPet.hunger;
+        commentEl.textContent = "Yuck food Gross!!";
+    } else {
+        myPet.hunger = myPet.hunger -3;
+        hungerEl.textContent = "Hunger: " + myPet.hunger;
+        console.log("Pet is being fed!");
+        
+    }
 }
 
 function napTime() {
-    console.log("Time to go to sleep!");
+    if(myPet.sleep < 4) {
+        sleepEl.textContent = "Sleep: " + myPet.hunger;
+        
+    } else { 
+        myPet.sleep = myPet.sleep -1;
+        sleepEl.textContent = "Sleep: " + myPet.sleep;
+        console.log("Time to go to sleep!");
+
+    }
 }
 
 function playTime() {
-    console.log("Time to play");
+    if(myPet.play < 2) {
+        playEl.textContent = "Play: " + myPet.play;
+    } else {
+        myPet.play = myPet.play -2;
+        playEl.textContent = "Play: " + myPet.play;
+        console.log("Time to play");
+
+    }
 }
 
 
@@ -122,4 +168,4 @@ class Tamagotchi {
     }
 }
 
-let myPet = new Tamagotchi("Berry");
+let myPet = new Tamagotchi("Berry")
