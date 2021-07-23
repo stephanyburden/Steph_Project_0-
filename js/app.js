@@ -112,6 +112,11 @@ function gameOver() {
     clearInterval(hungerInterval);
     clearInterval(sleepInterval);
     clearInterval(playInterval);
+    document.getElementById("feed-btn").style.display = "none"
+    document.getElementById("nap-btn").style.display = "none"
+    document.getElementById("play-btn").style.display = "none"
+    alert("GAME OVER!!")
+
     // Hide buttons when pet dies!
 }
 
@@ -122,11 +127,11 @@ function feedPet() {
     // update text on screen
     if(myPet.hunger < 3) {
         //myPet.hunger = 0;
-        hungerEl.textContent = "Hunger: " + myPet.hunger;
-        commentEl.textContent = "Yuck food Gross!!";
+        hungerEl.textContent = "Hungry: " + myPet.hunger;
+        commentEl.textContent = "Yuck! Too much food!!!!";
     } else {
         myPet.hunger = myPet.hunger -3;
-        hungerEl.textContent = "Hunger: " + myPet.hunger;
+        hungerEl.textContent = "Hungry: " + myPet.hunger;
         console.log("Pet is being fed!");
         
     }
@@ -134,11 +139,11 @@ function feedPet() {
 
 function napTime() {
     if(myPet.sleep < 4) {
-        sleepEl.textContent = "Sleep: " + myPet.hunger;
+        sleepEl.textContent = "Sleepy: " + myPet.hunger;
         
     } else { 
         myPet.sleep = myPet.sleep -1;
-        sleepEl.textContent = "Sleep: " + myPet.sleep;
+        sleepEl.textContent = "Sleepy: " + myPet.sleep;
         console.log("Time to go to sleep!");
 
     }
@@ -146,10 +151,10 @@ function napTime() {
 
 function playTime() {
     if(myPet.play < 2) {
-        playEl.textContent = "Play: " + myPet.play;
+        playEl.textContent = "Playful: " + myPet.play;
     } else {
         myPet.play = myPet.play -2;
-        playEl.textContent = "Play: " + myPet.play;
+        playEl.textContent = "Playful: " + myPet.play;
         console.log("Time to play");
 
     }

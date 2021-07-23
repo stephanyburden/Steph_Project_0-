@@ -1,3 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap');
+
+body {
+    background-image: url(../img/steven\ farm\ background.gif)
+}
+
+#body {
+    font-family: 'Press Start 2P', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(219, 73, 129);
+}
+
 #header {
     text-align: center;
+    color: rgb(219, 73, 129);
+    font-size: 15px;
+    font-family: 'Press Start 2P', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#list {
+    text-align: center;
+    color: rgb(219, 73, 129);
+    font-size: 25px;
+    font-family: 'Press Start 2P', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#picture {
+    display: flex;
+    justify-content: center;
+}
+
+#moods {
+    width: 200px;
+    height: 200px;
+    flex-direction: row;
+    font-size: 15px;
+    background: -webkit-linear-gradient(bottom,
+    rgba(255, 255, 255, 100), rgba(247, 219, 36, 100));
+}
+
+.list {
+    justify-content: space-between;
+    
 }

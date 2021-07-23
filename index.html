@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"defer></script>
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/app.js"defer></script>
+        <title>Document</title>
+    </head>
     
-<div id="body">
+<body>
 
+<div id="body">
     <div id="header">
         <h1>Tamagotchi Project 0</h1>
-        <h2>Click start, choose a name for your new pet and start to play!</h2>
-        <h3>Dont let my Mood get to 10 or ill DIE!! Once I reach 25 Im all grown up! Game Over!</h3>
+        <article>To play, press start and choose a name for your pet!</article>
+        <article>Dont let my Moods get to 10 or ill DIE!!</article> 
+        <article>Once reach 25 Im all grown up! Game Over!</article>
     </div>
 
 
     
-    <div>
+    <div id="list">
         <p id="pet-name"> My Name: </p>
         <p id="age">My Age: 0</p>
     </div>
     
-    <div>
-        <p>My Moods</p>
-        <p id="hunger">Hungry: 0</p><p id="comment">Feed me HUMAN!!</p>
-        <p id="sleep">Sleepy: 0</p>
-        <p id="play">Playful: 0</p>
+    <div id="moods">
+        <h3>My Moods</h3>
+        <p class="list" id="hunger">Hungry: 0</p><p id="comment"></p>
+        <p class="list" id="sleep">Sleepy: 0</p>
+        <p class="list" id="play">Playful: 0</p>
     </div>    
     
-    <div>
+    
+    <div id="picture">
+        <img src="img/baby_amethyst_4.png">
+    </div>
+
+    <div id="button">
         <button id="start-btn">Start</button>
         <button id="feed-btn">Feed Me!</button>
         <button id="nap-btn">Nap Time!</button>
         <button id="play-btn">Play With Me!</button>
     </div> 
     
-    
-    
-        
 </div>
+    
+    
 
-<body>
 </body>
 </html>
