@@ -5,13 +5,11 @@ body {
 }
 
 #body {
-    font-family: 'Press Start 2P', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(219, 73, 129);
+    color: rgb(241, 236, 157);
 }
 
 #header {
     text-align: center;
-    color: rgb(219, 73, 129);
     font-size: 15px;
     font-family: 'Press Start 2P', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
@@ -19,26 +17,44 @@ body {
 
 #list {
     text-align: center;
-    color: rgb(219, 73, 129);
+    color: rgb(249, 250, 173);
     font-size: 25px;
-    font-family: 'Press Start 2P', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: fantasy;
 }
 
 #picture {
     display: flex;
     justify-content: center;
+    position: relative; 
+    bottom: 60px;
 }
 
 #moods {
-    width: 200px;
-    height: 200px;
-    flex-direction: row;
-    font-size: 15px;
-    background: -webkit-linear-gradient(bottom,
-    rgba(255, 255, 255, 100), rgba(247, 219, 36, 100));
+    max-width: 200px;
+    height: 150px;
+    font-size: 30px;
+    font-family: fantasy;
 }
 
-.list {
-    justify-content: space-between;
+#button {
+    text-align: center;
+}
     
+#feed-btn {
+
+}
+
+#nap-btn {
+
+}
+
+#play-btn {
+    
+}
+
+
+
+
+#start {
+    text-align: center;
 }
