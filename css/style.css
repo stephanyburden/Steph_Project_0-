@@ -1,12 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap');
 
+
+
+
+
+
+
+
 body {
-    background-image: url(../img/steven\ farm\ background.gif)
+     background-image: url(../img/steven\ farm\ background.gif) 
 }
 
 #body {
-    color: rgb(241, 236, 157);
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #b800e6, 
+      0 0 40px #b800e6, 
+      0 0 50px #b800e6, 
+      0 0 60px #b800e6, 
+      0 0 70px #b800e6;
+    }
+    
+    to {
+      text-shadow: 
+      0 0 20px #fff, 
+      0 0 30px #be4dff, 
+      0 0 40px #be4dff, 
+      0 0 50px #be4dff, 
+      0 0 60px #be4dff, 
+      0 0 70px #be4dff, 
+      0 0 80px #be4dff;
+    }
+  }
+
+
+
+
 
 #header {
     text-align: center;
@@ -17,7 +55,16 @@ body {
 
 #list {
     text-align: center;
-    color: rgb(249, 250, 173);
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #cac48c,
+    0 0 21px #cac48c,
+    0 0 42px #cac48c,
+    0 0 82px #cac48c,
+    0 0 92px #cac48c,
+    0 0 102px #cac48c,
+    0 0 151px #cac48c;
     font-size: 25px;
     font-family: fantasy;
 }
@@ -34,27 +81,90 @@ body {
     height: 150px;
     font-size: 30px;
     font-family: fantasy;
+     color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #cac48c,
+      0 0 21px #cac48c,
+      0 0 42px #cac48c,
+      0 0 82px #cac48c,
+      0 0 92px #cac48c,
+      0 0 102px #cac48c,
+      0 0 151px #cac48c;
 }
 
 #button {
     text-align: center;
+    width: 170px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display:inline;
 }
-    
-#feed-btn {
+  
+#start-btn {
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
+}
 
+#start-btn:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+}
+
+
+#feed-btn {
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
+}
+
+#feed-btn:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
 }
 
 #nap-btn {
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
 
+}
+
+#nap-btn:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
 }
 
 #play-btn {
-    
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
+}
+
+#play-btn:hover  {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
 }
 
 
 
-
-#start {
-    text-align: center;
-}
