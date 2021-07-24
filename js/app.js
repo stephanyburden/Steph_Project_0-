@@ -71,7 +71,7 @@ function startSleepTimer() {
     sleepInterval = setInterval(function () {
         myPet.sleep++;
         sleepEl.textContent =  "Sleepy: " + myPet.sleep; 
-        if(myPet.sleep === 2) {
+        if(myPet.sleep === 3) {
             commentEl2.textContent = "Im so sleepy."
         }else if (myPet.sleep === 10) {
             commentEl2.textContent = "X___X DEAD!"
@@ -129,7 +129,7 @@ function feedPet() {
         hungerEl.textContent = "Hungry: " + myPet.hunger;
         commentEl1.textContent = "Yuck! Too much food!";
     } else {
-        myPet.hunger = myPet.hunger -3;
+        myPet.hunger = myPet.hunger -2;
         hungerEl.textContent = "Hungry: " + myPet.hunger;
         commentEl1.textContent = "YUM!"
         
