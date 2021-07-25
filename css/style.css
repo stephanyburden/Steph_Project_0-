@@ -8,7 +8,7 @@
 
 
 body {
-     background-image: url(../img/steven\ farm\ background.gif) 
+     /* background-image: url(../img/steven\ farm\ background.gif)  */
 }
 
 #body {
@@ -17,7 +17,7 @@ body {
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
 }
-
+/* 
 @-webkit-keyframes glow {
     from {
       text-shadow: 
@@ -40,7 +40,7 @@ body {
       0 0 70px #be4dff, 
       0 0 80px #be4dff;
     }
-  }
+  } */
 
 
 
@@ -170,17 +170,19 @@ body {
     border: 3px solid #00d7c3;
 }
 
-#picture {
+#comments {
+    font-size: 24px;
+    color: red;
+    font-family: fantasy;
     position: relative;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-delay: 2s;
-  }
-  
-  @keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% {left:0px; top:0px;}
-  }
+    bottom: 150px;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #cac48c,
+      0 0 21px #cac48c,
+      0 0 42px #cac48c,
+      0 0 82px #cac48c,
+      0 0 92px #cac48c,
+      0 0 102px #cac48c,
+      0 0 151px #cac48c;
+}
