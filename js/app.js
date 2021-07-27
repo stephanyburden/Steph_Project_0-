@@ -11,7 +11,7 @@ const playEl = document.getElementById("play");
 const hungerComment = document.getElementById("hunger-comment");
 const playComment = document.getElementById("play-comment");
 const sleepComment = document.getElementById("sleep-comment");
-
+const pictureEl = document.getElementById("pic");
 
 // State Var. 
 
@@ -55,15 +55,17 @@ function startHungerTimer(){
     hungerInterval = setInterval(function () {
         myPet.hunger++;
         hungerEl.textContent =  "Hungry: " + myPet.hunger; 
-        if(myPet.hunger === 1) {
-            hungerComment.textContent = "Feed me!"
+        if(myPet.hunger === 4) {
+            pictureEl.src = "../img/surprise_face.png"
+            hungerComment.textContent = "Feed me!";
         }else if (myPet.hunger === 10) {
-            hungerComment.textContent = "X___X DEAD!"
+            hungerComment.textContent = "X___X DEAD!";
+            
             gameOver();
         }
     },2000)
     
-
+    
 } //COMPLETE
 
 
@@ -72,12 +74,13 @@ function startSleepTimer() {
         myPet.sleep++;
         sleepEl.textContent =  "Sleepy: " + myPet.sleep; 
         if(myPet.sleep === 3) {
+            pictureEl.src = "../img/Baby_amethyst_unhappy.png";
             sleepComment.textContent = "Im so sleepy."
         }else if (myPet.sleep === 10) {
             sleepComment.textContent = "X___X DEAD!"
             gameOver();
         }
-    }, 4000)
+    }, 3000)
     
 } //COMPLETE
 
@@ -86,9 +89,10 @@ function startPlayTimer() {
         myPet.play++;
         playEl.textContent =  "Playful: " + myPet.play; 
         if(myPet.play === 4) {
+            pictureEl.src = "../img/Baby_amethyst_unhappy.png";
             playComment.textContent = "Im bored!!";
         }else if (myPet.play === 10) {
-            playComment.textContent = "X___X DEAD!" 
+            playComment.textContent = "X___X DEAD!"; 
             gameOver();
         }
     }, 3000)
@@ -115,6 +119,7 @@ function gameOver() {
     document.getElementById("feed-btn").style.display = "none"
     document.getElementById("nap-btn").style.display = "none"
     document.getElementById("play-btn").style.display = "none"
+    pictureEl.src = "../img/cracked_gem_gameover.png"
     nameInput.textContent = "GAME OVER!"
 
 }// COMPLETE
@@ -125,11 +130,11 @@ function feedPet() {
     // reduce the pets hunger
     // update text on screen
     if(myPet.hunger < 3) {
-        //myPet.hunger = 0;
         hungerEl.textContent = "Hungry: " + myPet.hunger;
         hungerComment.textContent = "Yuck! Too much food!";
     } else {
         myPet.hunger = myPet.hunger -2;
+        pictureEl.src = "../img/baby_amethyst_4.png"
         hungerEl.textContent = "Hungry: " + myPet.hunger;
         hungerComment.textContent = "YUM!"
         
@@ -143,6 +148,7 @@ function napTime() {
         
     } else { 
         myPet.sleep = myPet.sleep -1;
+        pictureEl.src = "../img/baby_amethyst_4.png"
         sleepEl.textContent = "Sleepy: " + myPet.sleep;
         sleepComment.textContent = "That was a good nap!"
 
@@ -155,6 +161,7 @@ function playTime() {
         playComment.textContent = "I dont want to play."
     } else {
         myPet.play = myPet.play -2;
+        pictureEl.src = "../img/baby_amethyst_4.png"
         playEl.textContent = "Playful: " + myPet.play;
         playComment.textContent = "Yay!"
 
