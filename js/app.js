@@ -127,8 +127,6 @@ function gameOver() {
 
 
 function feedPet() {
-    // reduce the pets hunger
-    // update text on screen
     if(myPet.hunger < 3) {
         hungerEl.textContent = "Hungry: " + myPet.hunger;
         hungerComment.textContent = "Yuck! Too much food!";
