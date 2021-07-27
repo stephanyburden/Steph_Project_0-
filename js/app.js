@@ -56,7 +56,7 @@ function startHungerTimer(){
         myPet.hunger++;
         hungerEl.textContent =  "Hungry: " + myPet.hunger; 
         if(myPet.hunger === 4) {
-            pictureEl.src = "../img/surprise_face.png"
+            pictureEl.src = "./img/surprise_face.png"
             hungerComment.textContent = "Feed me!";
         }else if (myPet.hunger === 10) {
             hungerComment.textContent = "X___X DEAD!";
@@ -74,7 +74,7 @@ function startSleepTimer() {
         myPet.sleep++;
         sleepEl.textContent =  "Sleepy: " + myPet.sleep; 
         if(myPet.sleep === 3) {
-            pictureEl.src = "../img/Baby_amethyst_unhappy.png";
+            pictureEl.src = "./img/Baby_amethyst_unhappy.png";
             sleepComment.textContent = "Im so sleepy."
         }else if (myPet.sleep === 10) {
             sleepComment.textContent = "X___X DEAD!"
@@ -89,7 +89,7 @@ function startPlayTimer() {
         myPet.play++;
         playEl.textContent =  "Playful: " + myPet.play; 
         if(myPet.play === 4) {
-            pictureEl.src = "../img/Baby_amethyst_unhappy.png";
+            pictureEl.src = "./img/Baby_amethyst_unhappy.png";
             playComment.textContent = "Im bored!!";
         }else if (myPet.play === 10) {
             playComment.textContent = "X___X DEAD!"; 
@@ -119,7 +119,7 @@ function gameOver() {
     document.getElementById("feed-btn").style.display = "none"
     document.getElementById("nap-btn").style.display = "none"
     document.getElementById("play-btn").style.display = "none"
-    pictureEl.src = "../img/cracked_gem_gameover.png"
+    pictureEl.src = "./img/cracked_gem_gameover.png"
     nameInput.textContent = "GAME OVER!"
 
 }// COMPLETE
@@ -134,7 +134,7 @@ function feedPet() {
         hungerComment.textContent = "Yuck! Too much food!";
     } else {
         myPet.hunger = myPet.hunger -2;
-        pictureEl.src = "../img/baby_amethyst_4.png"
+        pictureEl.src = "./img/baby_amethyst_4.png"
         hungerEl.textContent = "Hungry: " + myPet.hunger;
         hungerComment.textContent = "YUM!"
         
@@ -148,7 +148,7 @@ function napTime() {
         
     } else { 
         myPet.sleep = myPet.sleep -1;
-        pictureEl.src = "../img/baby_amethyst_4.png"
+        pictureEl.src = "./img/baby_amethyst_4.png"
         sleepEl.textContent = "Sleepy: " + myPet.sleep;
         sleepComment.textContent = "That was a good nap!"
 
@@ -161,7 +161,7 @@ function playTime() {
         playComment.textContent = "I dont want to play."
     } else {
         myPet.play = myPet.play -2;
-        pictureEl.src = "../img/baby_amethyst_4.png"
+        pictureEl.src = "./img/baby_amethyst_4.png"
         playEl.textContent = "Playful: " + myPet.play;
         playComment.textContent = "Yay!"
 
