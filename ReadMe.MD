@@ -2,7 +2,7 @@
 
 ## What is Tamagotchi Project?
 
-Tamagotchi Project 0 is similar to a Tamagotchi digital pet back in the early 2000's with a little twist. The foundation of the game is still the same where you have to feed, play and put your pet to sleep. But with a different character and theme. I pulled inspiration for the theme from an animated television series called Steven Universe. 
+Tamagotchi Project is similar to a Tamagotchi digital pet back in the early 2000's with a little twist. The foundation of the game is still the same where you have to feed, play and put your pet to sleep. But with a different character and theme. I pulled inspiration for the theme from an animated television series called Steven Universe. 
 
 ## User Story  
 
